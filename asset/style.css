@@ -8,6 +8,11 @@
   src: url("/Data/Lausanne-Regular.otf");
 }
 
+@font-face {
+  font-family: "picnic";
+  src: url("/Data/PicNic-Regular.otf");
+}
+
 HTML, body{
   cursor: crosshair;
   user-select: none;
@@ -44,9 +49,8 @@ a.no-underline {
   z-index: 200;
   cursor: pointer;
   display:block;
-  width: 100%;
-  max-width: 400px;
-  height: auto;
+  font-family: picnic;
+  font-size: 5rem;
 }
 
 .responsivecross {
