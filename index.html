@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <title>test</title>
+  <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
+  <link rel="stylesheet" href="asset/style.css">
+</head>
+
+
+<body>
+  <a-scene cursor="rayOrigin: mouse;"  vr-mode-ui="enabled: false">
+
+    <div class="container">
+      <div class="item">
+      <a href="https://thewrong.org/" target="_blank" class="no-underline">
+        TheWrong <br> 
+        Biennale 
+      </a>
+      </div>
+      <img id="Credit" class="responsive" src="/Data/logo.png" alt="logo-project">
+    </div>
+
+    
+    <a-assets>
+      <a-asset-item id="model" src="/Data/room.glb" ></a-asset-item>
+    </a-assets>
+    
+    <!-- Ajoute le modèle 3D -->
+    <a-gltf-model src="#model" scale="1 1 1" rotation="0 180 0"></a-gltf-model>
+    
+    <!-- Ajoute une caméra avec les contrôles d'orbite personnalisés -->
+    <a-entity camera position="-0.262 2.148 1.803" look-controls="pointerLockEnabled: false" raycaster="objects: [data-raycastable]"></a-entity>
+    
+    
+    <!-- Div cachée qui s'affichera lors du clic sur le point interactif -->
+    <div id="infoContainer1">
+      <div class="scroll" id="infoItem1">
+        <p id="p1"></p>
+      </div>
+      <div class="scroll" id="infoItem2">
+        <p id="p2_1"></p>
+        <p id="p2_2"></p>
+        <p id="p2_3"></p>
+      </div>
+    </div>
+
+
+
+    <div id="infoContainer">
+      <div>
+      </div>
+      <div class="scroll" id="infoItem">
+        <img id="cross">
+        <p id="txt"></p>
+      </div>
+    </div>
+    <!-- Div cachée qui s'affichera lors du clic sur le point interactif -->
+
+    <!-- Interactive point -->
+    <a-circle id="point" radius="0.05" color="red"  position="-1.184 1.105 -1.189" open-info></a-circle>
+
+
+
+
+
+
+  
+  </a-scene>
+
+  <script type="module" src="/asset/main.js"></script>
+</body>
+</html>
