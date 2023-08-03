@@ -205,3 +205,12 @@ Credit.addEventListener('click', () => {
   
 });
 
+document.addEventListener('DOMContentLoaded', () => {
+  const fullPageDiv = document.querySelector('.full-page-div');
+  const closeSquare = document.querySelector('.close-square');
+
+  // Ajouter un gestionnaire d'événements pour le carré
+  closeSquare.addEventListener('click', () => {
+    fullPageDiv.style.display = 'none';
+  });
+});
