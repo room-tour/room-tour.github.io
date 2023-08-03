@@ -1,7 +1,6 @@
 
 
 
-
 AFRAME.registerComponent('open-info', {
   init: function () {
 
@@ -9,6 +8,7 @@ AFRAME.registerComponent('open-info', {
     const infoItem = document.getElementById('infoItem');            // Recuperer Item
     const image = document.getElementById('cross')                   // Recuperer cross
     const texte = document.getElementById('txt');                    // Recuperer txt
+    const nbr = document.getElementById('nbr');
     const cameraEl = document.querySelector('[camera]');             // Recupérer la cam
     const pointEl = this.el;                                         // Récupérer point interactif
     
@@ -28,6 +28,8 @@ AFRAME.registerComponent('open-info', {
 
       pointEl.setAttribute('position', '-1.230 1.105 -1.235');       //|----> Position of circle next animation 
       pointEl.setAttribute('radius', '0.005');                       //|----> Scale of circle next animation   
+      nbr.setAttribute('scale', '0.03 0.03 0.03');
+      nbr.setAttribute('position', ' ');
       
       infoItem.style.color = 'Black';                                       //|
       infoItem.style.cursor = 'grab';                                       //|
@@ -65,7 +67,20 @@ AFRAME.registerComponent('open-info', {
       infoContainer.style.display = 'none';          //<-----------//| Close div dispay 
       pointEl.setAttribute('position', '-1.184 1.105 -1.189'); //<-//| Back position cicle 
       pointEl.setAttribute('radius', '0.05');        //<-----------//| Back size circle 
+      nbr.setAttribute('scale', '0.3 0.3 0.3');
     })
+
+    //const pointEl = this.el; // Récupérer point interactif
+
+    // Change color on mouse enter
+    pointEl.addEventListener('mouseenter', () => {
+      pointEl.setAttribute('color', 'rgba(255, 1, 255, 1)'); // Change color to red (or any other color you prefer)
+    });
+
+    // Change color back on mouse leave
+    pointEl.addEventListener('mouseleave', () => {
+      pointEl.setAttribute('color', 'white'); // Change color back to white
+    });
   }
 });
 
@@ -88,6 +103,7 @@ Credit.addEventListener('click', () => {
   infoContainer1.style.gridTemplateRows = '1fr 1fr 1fr';                         //|------> Style for Container 
   infoContainer1.style.gridTemplateColumns = '1fr 1fr';                          //|
   infoContainer1.style.margin = '5%';
+  infoContainer1.style.cursor = 'pointer';
   
   infoItem1.style.zIndex = '10000';  // Make the div appear on top
   infoItem1.style.backgroundColor = 'rgba(255, 255, 255, 0.9)'
