@@ -15,10 +15,24 @@
     </div> -->
   </div>
 
-  <video autoplay loop>
+  <video id="autoplay-video" autoplay muted>
     <source src="/Data/Int.mp4" type="video/mp4">
     <source src="/Data/Int.webm" type="video/webm">
   </video>
+
+  <script>
+    const video = document.getElementById("autoplay-video");
+
+    // Activer le son la vidéo est chargée
+    video.addEventListener("loadedmetadata", function() {
+      video.muted = false;
+    });
+
+    // vidéo terminée, relance lecture
+    video.addEventListener("ended", function() {
+      video.play();
+    });
+  </script>
 
 
   <!-- <a-scene cursor="rayOrigin: mouse;"  vr-mode-ui="enabled: false"> -->
