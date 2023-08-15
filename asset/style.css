@@ -16,6 +16,9 @@
 HTML, body{
   cursor: crosshair;
   user-select: none;
+
+  margin: 0;
+  overflow: hidden; /* Empêche le défilement de la page */
 }
 
 .container{
@@ -136,4 +139,14 @@ a.no-underline {
   font-weight: 1;
   color: rgb(255, 255, 255, 0.5); /* Couleur du texte */
   font-size: 2rem; /* Taille de police */
+}
+
+video {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  z-index: -1; /* Placez la vidéo derrière le contenu */
 }
