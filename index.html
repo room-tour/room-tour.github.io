@@ -16,23 +16,10 @@
   </div>
 
   <video id="autoplay-video" autoplay muted>
-    <source src="/Data/Int.mp4" type="video/mp4">
     <source src="/Data/Int.webm" type="video/webm">
+    <source src="/Data/Int.mp4" type="video/mp4">
   </video>
 
-  <script>
-    const video = document.getElementById("autoplay-video");
-
-    // Activer le son la vidéo est chargée
-    video.addEventListener("loadedmetadata", function() {
-      video.muted = false;
-    });
-
-    // vidéo terminée, relance lecture
-    video.addEventListener("ended", function() {
-      video.play();
-    });
-  </script>
 
 
   <!-- <a-scene cursor="rayOrigin: mouse;"  vr-mode-ui="enabled: false"> -->
@@ -89,8 +76,8 @@
     <!-- <a-circle id="point" radius="0.05" color="white" position="-1.184 1.105 -1.189" open-info>
       <a-text id="nbr" scale="0.3 0.3 0.3" value="1" color="black" align="center" position="0 0 0.01" scale="0.2 0.2 1"></a-text>
     </a-circle>
-
-  
+    
+    
   </a-scene> -->
 
   <!-- <script type="module" src="/asset/main.js"></script> -->
