@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>test</title>
+  <title>Room-Tour_Project</title>
   <script src="https://aframe.io/releases/1.2.0/aframe.min.js"></script>
   <link rel="stylesheet" href="asset/style.css">
 </head>
@@ -19,6 +19,16 @@
     <source src="/Data/Int.webm" type="video/webm">
     <source src="/Data/Int.mp4" type="video/mp4">
   </video>
+
+  <script>
+    const videoElement = document.querySelector('#autoplay-video'); // Remplacez par le sélecteur de votre vidéo
+
+    // Attente de l'événement de chargement de la vidéo
+    videoElement.addEventListener('loadeddata', () => {
+      // Activation du son
+      videoElement.muted = false;
+    });
+  </script>
 
 
 
