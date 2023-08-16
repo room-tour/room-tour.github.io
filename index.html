@@ -20,7 +20,15 @@
     <source src="/Data/Int.mp4" type="video/mp4">
   </video>
 
+  <script>
+    const videoElement = document.querySelector('#votreVideo'); // Remplacez par le sélecteur de votre vidéo
 
+    videoElement.addEventListener('loadeddata', () => {
+      videoElement.muted = true;
+
+      videoElement.play();
+    });
+  </script>
 
 
   <!-- <a-scene cursor="rayOrigin: mouse;"  vr-mode-ui="enabled: false"> -->
