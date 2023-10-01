@@ -1,0 +1,253 @@
+@font-face {
+  font-family: "helvetica";
+  src: url("/Data/Helvetica\ Neue\ Condensed\ Bold.ttf");
+}
+
+@font-face {
+  font-family: "kaeru-kaeru";
+  src: url("/Data/kaerukaeru-Regular.otf");
+}
+
+
+@font-face {
+  font-family: "Archia";
+  src: url("/Data/archia-bold-webfont.woff2");
+}
+
+:root {
+  --baseColor: rgb(225, 19, 204); /* Define a root variable for primary color */
+}
+
+HTML, body{
+  cursor: none;
+  margin: 0;
+  overflow: hidden; /* Empêche le défilement de la page */
+}
+
+div{
+  cursor: none;
+}
+
+.container{
+  display: flex;
+  justify-content: space-between;
+  padding: 15px;
+  gap: 5px;
+}
+
+a.no-underline {
+  text-decoration: none;
+  color: black;
+}
+
+.item{
+  z-index: 9999;
+  display: flex;
+  font-family: helvetica;
+  flex-grow:0;
+  padding: 0;
+  margin: 0;
+  color: black;
+  font-size: 2.5rem;
+  line-height: 0.9;
+  font-style: normal;
+  font-weight: bold;
+  text-shadow: 2px 2px 4px var(--baseColor);
+}
+
+.item:hover{
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+.text-with-shadow{
+  z-index: 200;
+  display:block;
+  font-family: kaeru-kaeru;
+  font-size: 5rem;
+  text-shadow: 2px 2px 4px var(--baseColor);
+}
+
+.text-with-shadow:hover{
+  text-shadow: 2px 2px 4px rgb(255, 255, 255);
+}
+
+.responsivecross {
+  z-index: 200;
+  display: block;
+  width: 100%;
+  max-width: 30px;
+  height: auto;
+}
+
+.responsiveI {
+  z-index: 200;
+  display: block;
+  width: 100%;
+  max-width: 40vh;
+  height: auto;
+}
+
+#quitimage {
+  position: absolute;
+  bottom: 10px;
+  right: 10px;
+}
+
+.scroll{
+  overflow: auto;
+  max-height: 70vh;
+}
+
+.Status{
+  font-size: 1.3vw;
+  font-weight: normal;
+  line-height: 0.5;
+  color: black;
+}
+
+.name{
+  margin-top: -3px;
+  font-size: 1.3vw;
+  font-weight: lighter;
+  line-height: 0.5;
+  color: rgb(255, 255, 255);
+}
+
+.margin{
+  margin-top: 4vh;
+}
+
+.full-page-div {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.708);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column; 
+  z-index: 9000;
+}
+
+.close-square:hover .full-page-div {
+  background-color: var(--baseColor); 
+}
+
+
+.title{
+  font-family: kaeru-kaeru;
+  font-size: 20vw;
+  font-weight: 1000;
+  line-height: 0.6;
+  color: rgb(0, 0, 0);
+  margin: 0px; /* Supprimer les marges par défaut */
+  padding: 0;
+  text-shadow: 0px 0px 10px var(--baseColor);
+  position: absolute;
+  top: 33%;  
+}
+
+.subtitle {
+  font-size: 7vh;
+  font-family: Lausanne;
+  font-weight: lighter;
+  text-shadow: 0px 0px 10px var(--baseColor);
+  padding-top: 15%;
+}
+
+.welcome{
+  width: 100%;
+  max-width: 10000px;
+  height: auto; 
+}
+
+.close-square {
+  position: fixed;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 300px;
+  height: 70px;
+  background-color: rgba(0, 0, 0, 0.8); /* Couleur du carré */
+  border-radius: 50px; /* Coins arrondis */
+  z-index: 10000;
+  box-shadow: var(--baseColor) 0px 0px 10px 2px;
+
+  /* Centrer le texte */
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+/* Style pour le texte à l'intérieur du carré */
+.close-square .Start {
+  margin: 0; /* Supprimer les marges par défaut du paragraphe */
+  font-family: 'Lausanne';
+  font-weight: 3;
+  color: var(--baseColor); /* Couleur du texte */
+  font-size: 1.5rem; /* Taille de police */
+}
+
+.close-square:hover {
+  box-shadow: rgb(255, 255, 255) 0px 0px 10px 5px; /* Effet de l'ombre au survol */
+}
+
+
+.custom-cursor {
+	z-index: 20000;
+	width: 20px;
+  height: 20px;
+  background-color: var(--baseColor);
+  border-radius: 50%;
+  position: absolute;
+  pointer-events: none; /* Empêche le curseur personnalisé d'interférer avec les éléments de la page */
+  transform: translate(-50%, -50%);
+}
+
+.artsname{
+  margin-top: -2vh;
+  line-height: 2ch;
+  font-size: 3vh;
+}
+
+.projectname{
+  line-height: 0.2ch;
+  font-size: 3vh;
+  color: white;
+}
+
+.dateProjec{
+  font-size: 3vh;
+}
+
+.scroll {
+  height: 100%; 
+  overflow-y: auto; 
+}
+
+
+.infoContainer{
+  box-shadow: -10px 0px 13px -7px #000000, 10px 0px 13px -7px #000000, 3px 5px 16px 28px rgba(0,0,0,0.48);
+}
+
+
+.center-button {
+  background-color: #FF00c8;
+  color: white;
+  border: none;
+  padding: 10px 20px;
+  text-align: center;
+  text-decoration: none;
+  display: block;
+  font-size: 16px;
+  border-radius: 4px;
+  margin: 0 auto; /* Centre le bouton horizontalement */
+  cursor: pointer;
+  transition: background-color 0.3s ease; /* Ajoute une transition pour le survol */
+}
+
+.center-button:hover {
+  background-color: #FF0080; /* Change la couleur de fond au survol */
+}
