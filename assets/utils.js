@@ -1,6 +1,4 @@
 
-// var myObjEntity = document.querySelector('#frame');
-// myObjEntity.setAttribute('material', 'src', './data/model/frame.mtl');
 
 
 // Light event for object
