@@ -8,7 +8,6 @@
 
 
 <body>
-
   <!-- custom-cursor -->
   <div class="custom-cursor"></div>
 
@@ -21,7 +20,7 @@
     </div>
   </div>
   
-  <a-scene renderer="antialias: false; alpha: false;" cursor="rayOrigin: mouse;"  vr-mode-ui="enabled: true" background="color: black">
+  <a-scene loading-screen="dotsColor: black; backgroundColor: #e113cc" renderer="antialias: false; alpha: false;" cursor="rayOrigin: mouse;"  vr-mode-ui="enabled: true" background="color: black">
 
     <div class="container">
       <div class="item">
@@ -36,12 +35,15 @@
     </div>
 
     <!-- Add camera -->
-    <a-camera id="cam" rotation="-12.605 7.105 0" 
+    <a-camera id="cam" 
+      rotation="-12.605 7.105 0" 
       near="0.01" 
       far="7.5" 
       position="-0.13293 0.67475 0.36964" 
-      look-controls>
+      look-controls
+      wasd-controls >
     </a-camera>
+
 
     <!----------- Light  -->
 
@@ -187,8 +189,8 @@
       src="#med"  
       id="med" 
       scale="0.02 0.02 0.02" 
-      rotation="0 22.821 0"
-      position="-0.51778 0.46789 0.33368"
+      rotation="0 87.20131162993563 0"
+      position="-0.44765 0.468 0.37278"
       class="interactable"
       medic
       light-event
@@ -198,7 +200,7 @@
     <a-gltf-model 
       src="#sponge"  
       id="sponge" 
-      scale="0.01 0.01 0.01" 
+      scale="0.005 0.005 0.005" 
       rotation="0 22.821 0"
       position="-0.27601 0.38808 0.19489"
       class="interactable"

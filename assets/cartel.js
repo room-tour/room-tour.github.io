@@ -93,8 +93,8 @@ function setupStyle(infoContainer, infoItem, image) {
   infoItem.style.overflow = 'auto';
   infoItem.style.zIndex = '2';
   infoItem.style.color = 'Black';
-  infoItem.style.fontFamily = 'archia';
-  infoItem.style.fontWeight = '100';
+  infoItem.style.fontFamily = 'Archia-r';
+  infoItem.style.fontWeight = 'bolder';
   infoItem.style.marginTop = '10%';
   infoItem.style.marginRight = '10%';
   infoItem.style.padding = '3%';
@@ -465,12 +465,12 @@ Credit.addEventListener('click', () => {
   infoContainer1.style.gridTemplateRows = '1fr 1fr 1fr';                         
   infoContainer1.style.gridTemplateColumns = '1fr 1fr';                          
   infoContainer1.style.margin = '5%';
-  infoContainer1.style.cursor = 'pointer';
+  infoContainer1.style.cursor = 'none';
   
   infoItem1.style.zIndex = '10000';  // Make the div appear on top
   infoItem1.style.backgroundColor = 'rgba(255, 19, 204, 0.6)';
   infoItem1.style.position = 'relative'; // Position the div relative to the viewport
-  infoItem1.style.fontFamily = 'Lausanne';                                 
+  infoItem1.style.fontFamily = 'Archia';                                 
   infoItem1.style.fontWeight = 'light';
   infoItem1.style.fontSize = '1.4rem';
   infoItem1.style.textAlign = 'match-parent';
@@ -480,7 +480,7 @@ Credit.addEventListener('click', () => {
   infoItem1.style.paddingLeft = '3%';
   infoItem1.style.paddingRight = '3%';
   txt1.innerHTML = 
-  '<p>L’intimité est une notion très abordée dans lechamp de l’art contemporain, en particulier entre les années 70 et 90 (Nan Goldin, Sophie Calle, Greg Araki, etc.) puis, à partir des années 2000 avec la démocratisation d’Internet. Néanmoins, nous avons identifié une ré- surgence particulièrement forte de la question de l’intimité depuis la crise du Covid-19, en particulier via l’espace domestique médiatisé sur le web. Un exemple frappant (bien qu’il concerne essentiellement les classes moyennes et supérieures et non les classes ouvrières/prolé- taires) : la généralisation partielle du télétravail. Nos intérieurs (salons, chambres...) sont peu à peu pensés et transformés pour devenir les décors de nos activités professionnelles, à l’image des influenceur. euse.s, streamer.euse.s et des travailleur.euse.s du sexe digitales. Nous assistons ainsi à une reconfiguration des distinctions entre le privé et le public, le personnel et le professionnel... \n \n  Partant de ce constat, notre pavillon virtuel prend la forme d’une chambre dans laquelle nous invitons des artistes et chercheur.euse.s à intervenir et/ou exposer. Comme une actualisation de The Kitchen Show (1991) d’Hans Ulrich Obrist, ou encore d’Open Bedroom (1993) de Jeremy Deller, nous envisageons l’espace domestique comme un lieu d’exposition alternatif pour mieux interroger les nouveaux enjeux de l’exposition de nos intérieurs sur le web.</p>'
+  '<p>Why is the bedroom overly exposed on the internet? How has the domestic space become a monetizable ressource through digital cultures and surveillance capitalism? To put it differently, what does “intimacy” really mean today? Room tour. Art in the age of remote work is an online exhibition as well as a research project and an artwork in itself. Inspired by the “room tour” trend on YouTube, which consists of sharing and com- menting on the personal space, this exhibition takes place in the curator’s bedroom. It shows works that question the mediation of the domestic space on the internet from various points of view and various social, cultural and political perspectives. Whether it corresponds to the generalization of remote work since the Covid-19 pandemic, or the emergence of new jobs related to content creation (streamers, influencers, digital sexworkers, etc.), or the invisible work of machines producing data in our homes (smart objects), it seems that digital practices have reconfigured the distinctions between the private and the public, the personal and the professional... In the meantime, more and more artists are creating, producing and sharing from their bedrooms using laptops or smartphones. Not only has the internet become the main subject of their work but it is also their preferred medium. Screen capture, found footage, saved footage, desktop film, internet essay, online investigations... all the works exposed here question web-based and (or?) remote practices on a broader scale. In the curator’s bedroom, each artwork is assigned to a personal object: one selected by the artist or one added by them (from their own bedroom?). Connecting subjectivities, creating new symbolic and semantic links between the artworks and the space, the artists and the curator, the mediated bedroom — as an exhibited space as well as an exhibition space — reminds us that intimacy is part of the collective and that the personal is inherently political.</p>'
   
   
   infoItem2.style.zIndex = '10000';  // Make the div appear on top
@@ -564,7 +564,6 @@ Credit.addEventListener('click', () => {
       infoContainer1.style.display = 'none';
     }
   });
-  
 });
 
 

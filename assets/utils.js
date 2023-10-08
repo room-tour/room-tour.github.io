@@ -1,5 +1,25 @@
 
 
+var camera = document.querySelector('#cam');
+
+// Définissez l'angle horizontal de limitation en degrés
+var maxHorizontalAngle = 4; // Par exemple, limite à ±45 degrés
+
+// Écoutez les événements de rotation de la caméra
+camera.addEventListener('componentchanged', function (evt) {
+if (evt.detail.name === 'rotation') {
+    var rotation = camera.getAttribute('rotation');
+    if (rotation.x > maxHorizontalAngle) {
+    rotation.x = maxHorizontalAngle;
+    camera.setAttribute('rotation', rotation);
+    } else if (rotation.x < -maxHorizontalAngle) {
+    rotation.x = -maxHorizontalAngle;
+    camera.setAttribute('rotation', rotation);
+    }
+}
+});
+  
+
 
 // Light event for object
 
@@ -22,23 +42,23 @@ AFRAME.registerComponent('light-event', {
         console.log('Day !');
         light.emit('fadein');
         spot_fleury.setAttribute('light', 'color', '#FF00c8');
-        spot_fleury.setAttribute('light', 'intensity', '6');
+        spot_fleury.setAttribute('light', 'intensity', '2');
         spot_Serra.setAttribute('light', 'color', '#FF00c8');
-        spot_Serra.setAttribute('light', 'intensity', '6');
+        spot_Serra.setAttribute('light', 'intensity', '2');
         spot_Laptop.setAttribute('light', 'color', '#FF00c8');
-        spot_Laptop.setAttribute('light', 'intensity', '6');
+        spot_Laptop.setAttribute('light', 'intensity', '2');
         spot_phone.setAttribute('light', 'color', '#FF00c8');
-        spot_phone.setAttribute('light', 'intensity', '6');
+        spot_phone.setAttribute('light', 'intensity', '2');
         spot_tn.setAttribute('light', 'color', '#FF00c8');
-        spot_tn.setAttribute('light', 'intensity', '6');
+        spot_tn.setAttribute('light', 'intensity', '2');
         spot_cadre.setAttribute('light', 'color', '#FF00c8');
-        spot_cadre.setAttribute('light', 'intensity', '6');
+        spot_cadre.setAttribute('light', 'intensity', '2');
         spot_med.setAttribute('light', 'color', '#FF00c8');
-        spot_med.setAttribute('light', 'intensity', '6');
+        spot_med.setAttribute('light', 'intensity', '2');
         spot_sponge.setAttribute('light', 'color', '#FF00c8');
-        spot_sponge.setAttribute('light', 'intensity', '6');
+        spot_sponge.setAttribute('light', 'intensity', '2');
         spot_disco.setAttribute('light', 'color', '#FF00c8');
-        spot_disco.setAttribute('light', 'intensity', '6');
+        spot_disco.setAttribute('light', 'intensity', '2');
         });
         
         el.addEventListener('mouseleave', function () {
