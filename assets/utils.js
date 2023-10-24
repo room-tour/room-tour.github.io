@@ -1,24 +1,6 @@
 
 
-var camera = document.querySelector('#cam');
 
-// Définissez l'angle horizontal de limitation en degrés
-var maxHorizontalAngle = 4; // Par exemple, limite à ±45 degrés
-
-// Écoutez les événements de rotation de la caméra
-camera.addEventListener('componentchanged', function (evt) {
-if (evt.detail.name === 'rotation') {
-    var rotation = camera.getAttribute('rotation');
-    if (rotation.x > maxHorizontalAngle) {
-    rotation.x = maxHorizontalAngle;
-    camera.setAttribute('rotation', rotation);
-    } else if (rotation.x < -maxHorizontalAngle) {
-    rotation.x = -maxHorizontalAngle;
-    camera.setAttribute('rotation', rotation);
-    }
-}
-});
-  
 
 
 // Light event for object
@@ -28,7 +10,6 @@ AFRAME.registerComponent('light-event', {
         var el = this.el;
         var light = document.getElementById('ambientLight');
         var spot_fleury = document.getElementById('spot-fleury');
-        var spot_Serra = document.getElementById('spot-Serra');
         var spot_Laptop = document.getElementById('spot-Laptop');
         var spot_phone = document.getElementById('spot-phone');
         var spot_tn = document.getElementById('spot-tn');
@@ -36,73 +17,69 @@ AFRAME.registerComponent('light-event', {
         var spot_med = document.getElementById('spot-med');
         var spot_sponge = document.getElementById('spot-sponge');
         var spot_disco = document.getElementById('spot-disco');
-
-
-        el.addEventListener('mouseenter', function () {
-        console.log('Day !');
-        light.emit('fadein');
-        spot_fleury.setAttribute('light', 'color', '#FF00c8');
-        spot_fleury.setAttribute('light', 'intensity', '2');
-        spot_Serra.setAttribute('light', 'color', '#FF00c8');
-        spot_Serra.setAttribute('light', 'intensity', '2');
-        spot_Laptop.setAttribute('light', 'color', '#FF00c8');
-        spot_Laptop.setAttribute('light', 'intensity', '2');
-        spot_phone.setAttribute('light', 'color', '#FF00c8');
-        spot_phone.setAttribute('light', 'intensity', '2');
-        spot_tn.setAttribute('light', 'color', '#FF00c8');
-        spot_tn.setAttribute('light', 'intensity', '2');
-        spot_cadre.setAttribute('light', 'color', '#FF00c8');
-        spot_cadre.setAttribute('light', 'intensity', '2');
-        spot_med.setAttribute('light', 'color', '#FF00c8');
-        spot_med.setAttribute('light', 'intensity', '2');
-        spot_sponge.setAttribute('light', 'color', '#FF00c8');
-        spot_sponge.setAttribute('light', 'intensity', '2');
-        spot_disco.setAttribute('light', 'color', '#FF00c8');
-        spot_disco.setAttribute('light', 'intensity', '2');
-        });
+        var spot_vr = document.getElementById('spot-vr');
+        var spot_manette = document.getElementById('spot-manette');
+        var spot_chien = document.getElementById('spot-chien');
         
+        
+        el.addEventListener('mouseenter', function () {
+            light.emit('fadein');
+            spot_fleury.setAttribute('light', 'color', '#FF00c8');
+            spot_fleury.setAttribute('light', 'intensity', '2');
+            spot_Laptop.setAttribute('light', 'color', '#FF00c8');
+            spot_Laptop.setAttribute('light', 'intensity', '2');
+            spot_phone.setAttribute('light', 'color', '#FF00c8');
+            spot_phone.setAttribute('light', 'intensity', '2');
+            spot_tn.setAttribute('light', 'color', '#FF00c8');
+            spot_tn.setAttribute('light', 'intensity', '2');
+            spot_cadre.setAttribute('light', 'color', '#FF00c8');
+            spot_cadre.setAttribute('light', 'intensity', '2');
+            spot_med.setAttribute('light', 'color', '#FF00c8');
+            spot_med.setAttribute('light', 'intensity', '2');
+            spot_sponge.setAttribute('light', 'color', '#FF00c8');
+            spot_sponge.setAttribute('light', 'intensity', '2');
+            spot_disco.setAttribute('light', 'color', '#FF00c8');
+            spot_disco.setAttribute('light', 'intensity', '2');
+            spot_vr.setAttribute('light', 'color', '#FF00c8');
+            spot_vr.setAttribute('light', 'intensity', '2');
+            spot_manette.setAttribute('light', 'color', '#FF00c8');
+            spot_manette.setAttribute('light', 'intensity', '2');
+            spot_chien.setAttribute('light', 'color', '#FF00c8');
+            spot_chien.setAttribute('light', 'intensity', '2');
+        });
+    
         el.addEventListener('mouseleave', function () {
-        console.log('Night !');
-        light.emit('fadeout');
-        spot_fleury.setAttribute('light', 'color', '#ffffff');
-        spot_fleury.setAttribute('light', 'intensity', '4.2');
-        spot_Serra.setAttribute('light', 'color', '#ffffff');
-        spot_Serra.setAttribute('light', 'intensity', '4.2');
-        spot_Laptop.setAttribute('light', 'color', '#ffffff');
-        spot_Laptop.setAttribute('light', 'intensity', '5');
-        spot_phone.setAttribute('light', 'color', '#ffffff');
-        spot_phone.setAttribute('light', 'intensity', '5');
-        spot_tn.setAttribute('light', 'color', '#ffffff');
-        spot_tn.setAttribute('light', 'intensity', '5');
-        spot_cadre.setAttribute('light', 'color', '#ffffff');
-        spot_cadre.setAttribute('light', 'intensity', '5');
-        spot_med.setAttribute('light', 'color', '#ffffff');
-        spot_med.setAttribute('light', 'intensity', '5');
-        spot_sponge.setAttribute('light', 'color', '#ffffff');
-        spot_sponge.setAttribute('light', 'intensity', '5');
-        spot_disco.setAttribute('light', 'color', '#ffffff');
-        spot_disco.setAttribute('light', 'intensity', '5');
+            light.emit('fadeout');
+            spot_fleury.setAttribute('light', 'color', '#ffffff');
+            spot_fleury.setAttribute('light', 'intensity', '4.2');
+            spot_Laptop.setAttribute('light', 'color', '#ffffff');
+            spot_Laptop.setAttribute('light', 'intensity', '5');
+            spot_phone.setAttribute('light', 'color', '#ffffff');
+            spot_phone.setAttribute('light', 'intensity', '5');
+            spot_tn.setAttribute('light', 'color', '#ffffff');
+            spot_tn.setAttribute('light', 'intensity', '5');
+            spot_cadre.setAttribute('light', 'color', '#ffffff');
+            spot_cadre.setAttribute('light', 'intensity', '5');
+            spot_med.setAttribute('light', 'color', '#ffffff');
+            spot_med.setAttribute('light', 'intensity', '5');
+            spot_sponge.setAttribute('light', 'color', '#ffffff');
+            spot_sponge.setAttribute('light', 'intensity', '5');
+            spot_disco.setAttribute('light', 'color', '#ffffff');
+            spot_disco.setAttribute('light', 'intensity', '5');
+            spot_vr.setAttribute('light', 'color', '#ffffff');
+            spot_vr.setAttribute('light', 'intensity', '5');
+            spot_manette.setAttribute('light', 'color', '#ffffff');
+            spot_manette.setAttribute('light', 'intensity', '5');
+            spot_chien.setAttribute('light', 'color', '#ffffff');
+            spot_chien.setAttribute('light', 'intensity', '5');
         });
     }
-});
 
+}); 
 
-// Écouteur d'événement raycaster-intersected sur la caméra
-// document.querySelector('#cam').addEventListener('raycaster-intersected', function (event) {
-//     if (event.detail.els && event.detail.els.length > 0) {
-//       const intersectedElement = event.detail.els[0]; // Premier élément intersecté
-//       console.log('Ray intersected with', intersectedElement);
-//     }
-//   });
-  
-  
-
-
-
-
-
-
-
+        
+        
+        
 // mouse
 const customCursor = document.querySelector(".custom-cursor");
 
@@ -114,7 +91,7 @@ document.addEventListener("mousemove", (e) => {
 document.addEventListener('DOMContentLoaded', () => {
     const fullPageDiv = document.querySelector('.full-page-div');
     const closeSquare = document.querySelector('.close-square');
-
+    
     // Ajouter un gestionnaire d'événements pour le carré
     closeSquare.addEventListener('click', () => {
         fullPageDiv.style.display = 'none';
@@ -164,3 +141,28 @@ closeSquare.addEventListener('mouseleave', () => {
     subtitle.style.textShadow = originalSubtitleStyles.textShadow;
     fullPageDiv.style.backgroundColor = originalFullPageDivStyle.backgroundColor;
 });
+
+
+document.addEventListener("DOMContentLoaded", function () {
+    const cameraRotation = document.querySelector("#camera-rotation");
+    
+    document.querySelector("a-scene").addEventListener("loaded", function () {
+        
+        const cameraEntity = document.querySelector("[camera]");
+        
+        cameraEntity.addEventListener("componentchanged", function (event) {
+            if (event.detail.name === "rotation") {
+                const currentRotation = cameraEntity.getAttribute("rotation");
+                if (currentRotation.y > 45) {
+                    currentRotation.y = 45;
+                    cameraEntity.setAttribute("rotation", currentRotation);
+                } else if (currentRotation.y < -45) {
+                    currentRotation.y = -45;
+                    cameraEntity.setAttribute("rotation", currentRotation);
+                }
+            }
+        });
+    });
+});
+
+
