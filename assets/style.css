@@ -18,6 +18,7 @@
   src: url("/Data/archia-regular-webfont.ttf");
 }
 
+
 :root {
   --baseColor: rgb(225, 19, 204); 
 }
@@ -277,4 +278,8 @@ a.no-underline {
 #infoItem2{
   box-shadow: 21px 10px 10px 25px rgba(255,19,204,0.6);
   border-radius: 0px 4px 4px 0px;
+}
+
+.highlight-name{
+  font-family: "Archia";
 }
