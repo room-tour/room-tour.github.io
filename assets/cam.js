@@ -1,16 +1,20 @@
+
+
+
+
 AFRAME.registerComponent('custom-camera-controls', {
     init: function () {
       const cameraEl = document.getElementById('cam');
-      const horizontalStartAngle = -45;   // Angle de départ de rotation horizontale (en degrés)
-      const horizontalEndAngle = 28;     // Angle d'arrêt de rotation horizontale (en degrés)
-      const verticalStartAngle = -14;     // Angle de départ de rotation verticale (en degrés)
-      const verticalEndAngle = 30;       // Angle d'arrêt de rotation verticale (en degrés)
-      const rotationSpeed = 0.1;        // Vitesse de rotation
+      const horizontalStartAngle = -45;   // Angle
+      const horizontalEndAngle = 28;      // Angle 
+      const verticalStartAngle = -14;     // Angle 
+      const verticalEndAngle = 30;        // Angle 
+      const rotationSpeed = 0.1;          // Rotation speed
       let isRotating = false;
       let previousMouseX;
       let previousMouseY;
   
-      // Fonction pour mettre à jour la rotation de la caméra
+      // Update camera rotation 
       const updateRotation = function (event) {
         if (isRotating) {
           const deltaX = event.clientX - previousMouseX;
@@ -22,10 +26,10 @@ AFRAME.registerComponent('custom-camera-controls', {
             z: 0
           };
   
-          // Restreindre la rotation verticale
+          // Restrict vertical rotation
           newRotation.x = Math.min(verticalEndAngle, Math.max(verticalStartAngle, newRotation.x));
   
-          // Si l'angle de rotation horizontale dépasse l'angle d'arrêt, ajustez-le
+          // horizontal rotation angle exceeds stop angle
           if (newRotation.y < horizontalStartAngle) {
             newRotation.y = horizontalStartAngle;
           } else if (newRotation.y > horizontalEndAngle) {
@@ -38,7 +42,7 @@ AFRAME.registerComponent('custom-camera-controls', {
         }
       };
   
-      // Fonction pour activer la rotation lors du clic
+      // activate rotation on click
       const startRotation = function (event) {
         if (event.button === 0) { // Le clic gauche est enfoncé
           isRotating = true;
@@ -47,14 +51,14 @@ AFRAME.registerComponent('custom-camera-controls', {
         }
       };
   
-      // Fonction pour désactiver la rotation lors du relâchement du clic
+      // activate rotation on click
       const stopRotation = function (event) {
         if (event.button === 0) { // Le clic gauche est relâché
           isRotating = false;
         }
       };
   
-      // Écouter les événements de clic et de mouvement de la souris pour la rotation de la caméra
+      // events click mouse movement camera rotation
       window.addEventListener('mousedown', startRotation);
       window.addEventListener('mousemove', updateRotation);
       window.addEventListener('mouseup', stopRotation);

@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html>
 <head>
-  <title>"Room Tour — Art in the age of remote work</title>
+  <title>Room Tour — Art in the age of remote work</title>
   <script src="./aframe/dist/aframe.min.js"></script>
   <link rel="stylesheet" href="assets/style.css">
 </head>
@@ -37,113 +37,113 @@
     <!-- Add camera -->
     <script type="module" src="./assets/cam.js"></script>
     <a-entity 
-    camera
-    custom-camera-controls
-    id="cam" 
-    position="-0.133 0.675 0.428">
-  </a-entity>
+      camera
+      custom-camera-controls
+      id="cam" 
+      position="-0.133 0.675 0.428">
+    </a-entity>
   
   <!----------- Light  -->
   
-  <a-light 
-  id="spot-fleury" 
+    <a-light 
+      id="spot-fleury" 
       light="angle: 19; color: #ffffff; intensity: 10; decay: 0; penumbra: 1" 
       rotation="-34.238238963632604 -51.77361228361145 -11.966796509102373" 
       position="0.14871 0.7168 0.4701" 
       type="spot"
-      ></a-light>
-      
-      <a-light 
+    ></a-light>
+    
+    <a-light 
       id="spot-chien" 
       light="angle: 19; color: #ffffff; intensity: 10; decay: 0; penumbra: 1" 
       rotation="-34.238238963632604 18.977508090323127 -11.966796509102373" 
       position="-0.30589 0.94298 -0.10279" 
       type="spot"
-      ></a-light>
-      
-      <a-light 
+    ></a-light>
+    
+    <a-light 
       id="spot-Laptop" 
       light="angle: 25.89; color: #ffffff; intensity: 8.42; decay: 0; penumbra: 1" 
       rotation="-80.906 117.255 155.097" 
       position="-0.38584 0.624 0.04155" 
       type="spot"
-      ></a-light>
-      
-      
-      <a-light 
+    ></a-light>
+    
+    
+    <a-light 
       id="spot-phone" 
       light="angle: 15.51; color: #ffffff; intensity: 8.42; decay: 0; penumbra: 1" 
       rotation="-80.906 117.255 155.097" 
       position="-0.19732 0.624 0.06625" 
       type="spot"
-      ></a-light>
-      
-      
-      <a-light 
+    ></a-light>
+    
+    
+    <a-light 
       id="spot-tn" 
       light="angle: 25.26; color: #ffffff; intensity: 6; decay: 0; penumbra: 1" 
       rotation="-80.906 117.255 155.097" 
       position="0.0565 0.586 0.02551" 
       type="spot"
-      ></a-light>
-      
-      
-      <a-light 
+    ></a-light>
+    
+    
+    <a-light 
       id="spot-cadre" 
       light="angle: 17.26; color: #ffffff; intensity: 6; decay: 0; penumbra: 1" 
       rotation="-61.54884522633842 75.3301990726201 167.17189588532028" 
       position="-0.39389 0.593 0.2945" 
       type="spot"
-      ></a-light>
-      
-      
-      <a-light 
+    ></a-light>
+    
+    
+    <a-light 
       id="spot-med" 
       light="angle: 15.07; color: #ffffff; intensity: 6; decay: 0; penumbra: 1" 
       rotation="-80.562 106.602 155.748" 
       position="-0.41048 0.593 0.35148" 
       type="spot"
-      ></a-light>
-      
-      <a-light 
+    ></a-light>
+    
+    <a-light 
       id="spot-sponge" 
       light="angle: 15.07; color: #ffffff; intensity: 6; decay: 0; penumbra: 1" 
       rotation="-80.562 106.602 155.748" 
       position="-0.26137 0.51306 0.19348" 
       type="spot"
-      ></a-light>
-      
-      <a-light 
+    ></a-light>
+    
+    <a-light 
       id="spot-vr" 
       light="angle: 15.07; color: #ffffff; intensity: 6; decay: 0; penumbra: 1" 
       rotation="-80.562 106.602 155.748" 
       position="0.15082 0.67278 0.38616" 
       type="spot"
-      ></a-light>
-      
-      
-      <a-light 
+    ></a-light>
+    
+    
+    <a-light 
       id="spot-manette" 
       light="angle: 9.63; color: #ffffff; intensity: 6; decay: 0; penumbra: 1" 
       rotation="-80.562 106.602 155.748" 
       position="-0.49265 0.673 0.11133" 
       type="spot"
-      ></a-light>
-      
-      <a-light 
+    ></a-light>
+    
+    <a-light 
       id="spot-disco" 
       light="angle: 15.07; color: #ffffff; intensity: 6; decay: 0; penumbra: 1" 
       rotation="61.819281305640175 19.436447284222915 -80.15679553880217" 
       position="-0.14207 0.73468 0.28859" 
       type="spot"
-      ></a-light>
-      
-      <!-- Abient light  -->
-      <a-light 
+    ></a-light>
+    
+    <!-- Abient light  -->
+    <a-light 
       id="ambientLight" 
       position="0 5 0" 
       light="type: ambient; intensity: 1" 
-    animation__fade="property: light.intensity; startEvents: fadein; to: 0.5; dur: 250; easing: linear" animation__reset="property: light.intensity; startEvents: fadeout; to: 1.3; dur: 250; easing: linear"
+      animation__fade="property: light.intensity; startEvents: fadein; to: 0.5; dur: 250; easing: linear" animation__reset="property: light.intensity; startEvents: fadeout; to: 1.3; dur: 250; easing: linear"
     ></a-light>
     
     
@@ -152,13 +152,10 @@
     
     <!-------- Add 3D Models -------->
     
+    <!-- Loading 3d models -->
     <a-assets>
       <a-asset-item id="room" rotation="0 104.171 0" src="./Data/model/last_room.obj" ></a-asset-item>
       <a-asset-item id="room-mtl" src="./Data/model/last_room.mtl" ></a-asset-item>
-      
-      <!-- <a-asset-item id="tn" scale="0.018 0.018 0.018" position="-0.16392 0.61271 0.10184" rotation="-53.47873468192078 -40.61296739225814 79.93448791429141" src="./Data/model/tn.obj" ></a-asset-item> -->
-      <!-- <a-asset-item id="tn-mtl" src="./Data/model/tn.mtl" ></a-asset-item> -->
-      
       <a-asset-item id="house" scale="0.05 0.05 0.05" rotation="4.333 -55.921 -0.9" position="0.2115 0.643 0.42123" src="./Data/model/maison.glb" ></a-asset-item>
       <a-asset-item id="cadre" src="./Data/model/cadre.glb" ></a-asset-item>
       <a-asset-item id="med" src="./Data/model/medicaments.glb" ></a-asset-item>
@@ -338,10 +335,14 @@
       </div>
     </div>
     
-    <!-- Div cachée qui s'affichera lors du clic sur le point interactif -->
+  <!-- Div cachée qui s'affichera lors du clic sur le point interactif -->
+
+
   </a-scene>
   
-  <audio src="/Data/roomtour-site.mp3" autoplay loop></audio>.
+  <audio src="/Data/roomtour-site.mp3" autoplay loop></audio>
+  <iframe src="Data/roomtour-site.mp3" allow="autoplay" style="display:none" id="iframeAudio">
+  </iframe> 
   <script type="module" src="/assets/utils.js"></script>
   <script type="module" src="/assets/cartel.js"></script>
 </body>

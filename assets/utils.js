@@ -4,7 +4,6 @@
 
 
 // Light event for object
-
 AFRAME.registerComponent('light-event', {
     init: function () {
         var el = this.el;
@@ -108,10 +107,10 @@ const title = document.querySelector('.title');
 const subtitle = document.querySelector('.subtitle');
 const fullPageDiv = document.querySelector('.full-page-div');
 
-// Sélectionnez l'élément .close-square
+// .close-square element
 const closeSquare = document.querySelector('.close-square');
 
-// Stockez les styles d'origine de .title et .subtitle pour une réinitialisation ultérieure
+// styles origin .title, .subtitle for réinit 
 const originalTitleStyles = {
     color: title.style.color,
     textShadow: title.style.textShadow
@@ -126,43 +125,30 @@ const originalFullPageDivStyle = {
     backgroundColor: fullPageDiv.style.backgroundColor
 };
 
-// Ajoutez un gestionnaire d'événements pour le survol
+
+//  add a hover event handler 
 closeSquare.addEventListener('mouseenter', () => {
-    // Changez la couleur du texte et la ombre portée de .title et .subtitle en rose
+    //  Changez la couleur du texte et la ombre portée de .title et .subtitle en rose
     title.style.textShadow = '0px 0px 10px rgb(255, 255, 255)';
     subtitle.style.textShadow = '0px 0px 10px rgb(255, 255, 255)';
     fullPageDiv.style.backgroundColor = 'rgba(255, 19, 204, 0.5)'
 });
 
-// Ajoutez un gestionnaire d'événements pour le départ du survol (pour rétablir les styles d'origine)
+// add a hover event handler 
 closeSquare.addEventListener('mouseleave', () => {
-    // Retabilr paramtre default style 
+    //  Restore default style setting  
     title.style.textShadow = originalTitleStyles.textShadow;
     subtitle.style.textShadow = originalSubtitleStyles.textShadow;
     fullPageDiv.style.backgroundColor = originalFullPageDivStyle.backgroundColor;
 });
 
 
-document.addEventListener("DOMContentLoaded", function () {
-    const cameraRotation = document.querySelector("#camera-rotation");
-    
-    document.querySelector("a-scene").addEventListener("loaded", function () {
-        
-        const cameraEntity = document.querySelector("[camera]");
-        
-        cameraEntity.addEventListener("componentchanged", function (event) {
-            if (event.detail.name === "rotation") {
-                const currentRotation = cameraEntity.getAttribute("rotation");
-                if (currentRotation.y > 45) {
-                    currentRotation.y = 45;
-                    cameraEntity.setAttribute("rotation", currentRotation);
-                } else if (currentRotation.y < -45) {
-                    currentRotation.y = -45;
-                    cameraEntity.setAttribute("rotation", currentRotation);
-                }
-            }
-        });
-    });
-});
+// Playing the soundtrack on chrome
+var isChrome = /Chrome/.test(navigator.userAgent) && /Google Inc/.test(navigator.vendor);
 
-
+if (!isChrome){
+    $('#iframeAudio').remove()
+}
+else {
+    $('#playAudio').remove() 
+}

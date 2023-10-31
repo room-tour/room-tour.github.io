@@ -19,7 +19,7 @@
 }
 
 :root {
-  --baseColor: rgb(225, 19, 204); /* Define a root variable for primary color */
+  --baseColor: rgb(225, 19, 204); 
 }
 
 HTML, body{
@@ -38,6 +38,11 @@ div::-webkit-scrollbar{
 
 a{
   text-decoration: none;
+}
+
+.a-loader-title {
+  color: var(--baseColor);
+  background-color: var(--baseColor);
 }
 
 .container{
@@ -254,10 +259,10 @@ a.no-underline {
   font-weight: 800;
   font-family: 'Archia';
   border-radius: 50px;
-  margin: 0 auto; /* Centre le bouton horizontalement */
+  margin: 0 auto; 
   margin-top: 30px;
   margin-bottom: 30px;
-  transition: background-color 0.3s ease; /* Ajoute une transition pour le survol */
+  transition: background-color 0.3s ease;
 }
 
 .center-button:hover {
